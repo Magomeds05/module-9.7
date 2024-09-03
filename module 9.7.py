@@ -1,13 +1,13 @@
 def is_prime(func):
     def wrapper(*numbers: int):
         res = func(*numbers)
-        for i in range(1, res):
+        for i in range(2, res):
             if res % i == 0:
-                print("Простое")
+                print("Составное")
                 return res
             else:
-                print("Составное")
-                break
+                print("Простое")
+                return res
     return wrapper
 
 
